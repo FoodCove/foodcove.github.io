@@ -1,14 +1,19 @@
+<!DOCTYPE html>
 <html>
-  <div id="g_id_onload"
-     data-client_id="614762947977-5k4spv9nm9grcu2npg9quf7g7ijkt04m.apps.googleusercontent.com"
-     data-auto_select="true"
-     data-login_uri="https://juicecove.github.io/">
-</div>
-<div class="g_id_signout">Sign Out</div>
-<script>
-    const button = document.getElementById(‘signout_button’);
-    button.onclick = () => {
-      google.accounts.id.disableAutoSelect();
+
+<head>
+  <title>Google Auth Demo</title>
+    <meta name="google-signin-client_id" content="614762947977-5k4spv9nm9grcu2npg9quf7g7ijkt04m.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+  <h1>Welcome to the Demo</h1>
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <script>
+    function onSignIn(googleUser) {
+      // get user profile information
+      console.log(googleUser.getBasicProfile())
     }
-</script>
+  </script>
+</body>
 </html>
