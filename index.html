@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Google Auth Demo</title>
-  <meta name="google-signin-client_id" content="614762947977-5k4spv9nm9grcu2npg9quf7g7ijkt04m.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js"></script>
-</head>
-<body>
-  <h1>Neels demo</h1>
-  <div class="g-signin2"></div>
-</body>
+<html>
+  <body>
+      <script src="https://accounts.google.com/gsi/client" async defer></script>
+      <div id="g_id_onload"
+         data-client_id="614762947977-5k4spv9nm9grcu2npg9quf7g7ijkt04m.apps.googleusercontent.com"
+         data-login_uri="https://juicehove.github.io/"
+         data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin"
+         data-type="standard"
+         data-size="large"
+         data-theme="outline"
+         data-text="sign_in_with"
+         data-shape="rectangular"
+         data-logo_alignment="left">
+      </div>
+
+      <script src="https://accounts.google.com/gsi/client?hl=fr" async defer></script>
+
+<div class="g_id_signin"
+  data-locale="fr">
+</div>
+  </body>
 </html>
