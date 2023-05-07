@@ -1,35 +1,22 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>Google Auth Demo</title>
-    <meta name="google-signin-client_id" content="614762947977-5k4spv9nm9grcu2npg9quf7g7ijkt04m.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <head>
+    <meta charset="UTF-8">
+    <title>Food Suggestion App</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-<body>
-  <h1>Welcome to the Demo</h1>
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
-<script>
-  function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-</script>
-<a href="#" onclick="signOut();">Sign out</a>
-<script>
-  gapi.load('auth2', function() {
-            gapi.auth2.init().then(function(){
-                var auth2 = gapi.auth2.getAuthInstance();
-                auth2.signOut().then(function(){
-                    window.location = "/logout.php/state=not_logged_in";
-                });
-            });
-
-        });
-</script>
-
-</body>
+  <body>
+    <h1>What Should You Eat?</h1>
+    <div class="button-container">
+      <button id="breakfast-button">Breakfast</button>
+      <button id="lunch-button">Lunch</button>
+      <button id="dinner-button">Dinner</button>
+    </div>
+    <div id="food-suggestion">
+      <h2 id="food-name"></h2>
+      <img id="food-image" src="" alt="">
+      
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
